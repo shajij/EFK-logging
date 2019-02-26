@@ -1,0 +1,56 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv01
+spec:
+  capacity:
+    storage: 30Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: do-block-storage
+  mountOptions:
+    - hard
+    - nfsvers=4.1
+  nfs:
+    path: /var/lib/docker/nfs2
+    server: 172.18.8.67
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv02
+spec:
+  capacity:
+    storage: 30Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: do-block-storage
+  mountOptions:
+    - hard
+    - nfsvers=4.1
+  nfs:
+    path: /var/lib/docker/nfs2
+    server: 172.18.8.67
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv03
+spec:
+  capacity:
+    storage: 30Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: do-block-storage
+  mountOptions:
+    - hard
+    - nfsvers=4.1
+  nfs:
+    path: /var/lib/docker/nfs2
+    server: 172.18.8.67
