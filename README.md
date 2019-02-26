@@ -1,5 +1,7 @@
 Start with PV settings after mapping the appropriate files. Make sure you have the nfs utils on the host.
 
+#Commands
+```bash
 kubectl apply -f pv.yaml
 kubectl create -f kube-logging.yaml
 kubectl create -f elasticsearch_svc.yaml
@@ -15,3 +17,4 @@ kubectl create -f kibana.yaml
 kubectl get pods --namespace=kube-logging
 
 kubectl port-forward kibana-6c9fb4b5b7-plbg2 5601:5601 --namespace=kube-logging
+```
